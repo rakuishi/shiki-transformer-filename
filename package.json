@@ -1,6 +1,7 @@
 {
   "name": "shiki-transformer-filename",
   "version": "0.1.0",
+  "description": "A Shiki transformer that displays a filename above code blocks",
   "type": "module",
   "exports": {
     ".": {
@@ -8,8 +9,28 @@
       "default": "./dist/index.js"
     }
   },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "shiki",
+    "transformer",
+    "filename",
+    "code-block",
+    "syntax-highlight"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rakuishi/shiki-transformer-filename"
+  },
+  "homepage": "https://github.com/rakuishi/shiki-transformer-filename#readme",
+  "bugs": {
+    "url": "https://github.com/rakuishi/shiki-transformer-filename/issues"
+  },
   "scripts": {
     "build": "tsup src/index.ts --format esm --dts",
+    "prepublishOnly": "npm test && npm run build",
     "test": "vitest run"
   },
   "peerDependencies": {
